@@ -60,18 +60,18 @@ def single_type_candy_count(filename):
 
 def reflections_and_projections(points):
     ref_matrix = np.array([[1,0], [0,-1]], dtype = np.int64)
-    print(points)
+    #print(points)
     output = ref_matrix.dot(points)
-    print(output)
+    #print(output)
     output[1,:] = 2 + output[1,:]
-    print(output)
+    #print(output)
    # rot_matrix = np.array([[np.cos(np.pi/2), np.negative(np.sin(np.pi/2))], [np.sin(np.pi/2), np.cos(np.pi/2)]], dtype = int)
     rot_matrix = np.array([[0, -1], [1, 0]], dtype = int)
     proj_matrix = np.multiply((1/10), np.array([[1, 3], [3,9]], dtype = float))
     output = rot_matrix.dot(output)
-    print(output)
+    #print(output)
     output = proj_matrix.dot(output)
-    print(output)
+    #print(output)
     return output
 
 def normalize(image):
